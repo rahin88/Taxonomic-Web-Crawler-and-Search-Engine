@@ -1,0 +1,20 @@
+
+Setting Up databse 
+
+Postgres version 8.4 +
+
+Login as "postgres" user
+
+Create database and main user through psql
+
+CREATE USER tcrawler WITH CREATEDB CREATEROLE PASSWORD 'tcrawler';
+CREATE DATABASE tcrawlerdb OWNER tcrawler;
+
+get out of postgres user account after executing above commands.
+
+you can access database with following command ==>
+
+psql -d tcrawlerdb -U tcrawler -W
+
+psql -f <root_dir>/TCrawler_DB.sql -U tcrawler -d tcrawlerdb  --> creates database
+
